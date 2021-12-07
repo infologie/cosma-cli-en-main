@@ -11,7 +11,7 @@ collections:
     extension: "md"
     fields:
       - {label: "Titre", name: "title", widget: "string", required: true}
-      - {label: "Identifiant (14 chiffres)", name: "id",  widget: "number", pattern: ["\d{14}","L'identifiant doit être une chaîne de caractères unique composée de 14 chiffres"] required: true}
+      - {label: "Identifiant (14 chiffres)", name: "id",  widget: "number", pattern: [".{14}","L'identifiant doit être une chaîne de caractères unique composée de 14 chiffres"] required: true}
       - {label: "Type", name: "type", widget: "string", default: "documentation", required: true}
       - {label: "Mots-clés", name: "tags", widget: "list", required: false}
       - {label: "Contenu", name: body, widget: "markdown"}
