@@ -17,3 +17,4 @@ collections:
       - {label: "ID", name: "id",  widget: "hidden", default: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}", required: true}
       - {label: "Type", name: "type", widget: "string", default: "documentation", required: true}
       - {label: "Mots-clés", name: "tags", widget: "list", required: false}
+      - {label: "Contenu", name: body, widget: "markdown"}
