@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "fiches"
+    label: "Fiches"
+    folder: "cosma-fiches-aide"
+    create: true
+    fields:
+      - {label: "Titre", name: "title", widget: "string", required: true}
+      - {label: "ID", name: "id",  widget: "hidden", default: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}", required: true}
+      - {label: "Type", name: "type", widget: "string", default: "documentation", required: true}
+      - {label: "Mots-clés", name: "tags", widget: "list", required: false}
