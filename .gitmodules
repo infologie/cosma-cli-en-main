@@ -1,0 +1,3 @@
+[submodule "cosma-fiches-aide"]
+	path = cosma-fiches-aide
+	url = https://github.com/graphlab-fr/cosma-fiches-aide
