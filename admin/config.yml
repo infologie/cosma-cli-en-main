@@ -3,18 +3,15 @@ backend:
   branch: main
 locale: "fr"
 publish_mode: editorial_workflow
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
 collections:
   - name: "fiches"
     label: "Fiches"
     folder: "fiches"
     create: true
-    slug: "{{slug}}"
     extension: "md"
     fields:
       - {label: "Titre", name: "title", widget: "string", required: true}
-      - {label: "ID", name: "id",  widget: "hidden", default: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}", required: true}
+      - {label: "Identifiant (14 chiffres)", name: "id",  widget: "number", pattern: ["\d{14}","L'identifiant doit être une chaîne de caractères unique composée de 14 chiffres"] required: true}
       - {label: "Type", name: "type", widget: "string", default: "documentation", required: true}
       - {label: "Mots-clés", name: "tags", widget: "list", required: false}
       - {label: "Contenu", name: body, widget: "markdown"}
