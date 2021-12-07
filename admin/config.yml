@@ -8,7 +8,7 @@ public_folder: "/images/uploads"
 collections:
   - name: "fiches"
     label: "Fiches"
-    folder: "cosma-fiches-aide"
+    folder: "fiches"
     create: true
     slug: "{{slug}}"
     extension: "md"
